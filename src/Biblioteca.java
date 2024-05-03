@@ -179,13 +179,14 @@ public class Biblioteca {
             System.out.println("Se ha actualizado la disponibilidad del libro correctamente. ");
             con.close();
         } catch (SQLException e) {
-                System.err.println("Error al agregar colección: " + e.getMessage()); 
+                System.err.println("Error al actualizar disponibilidad de libro: " + e.getMessage()); 
                 try {
                     con.rollback(); 
                     } catch (SQLException el){ 
                     }   
         }
     }
+    
     public static void eliminarLibro() {
         Connection con = null;
         System.out.println("-- Eliminar libro no disponible--");
